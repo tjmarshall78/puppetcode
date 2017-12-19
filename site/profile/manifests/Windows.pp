@@ -1,4 +1,4 @@
-class profile::Windows {
+class profile::windows {
 
   #the base profile should include component modules that will be on all nodes
 

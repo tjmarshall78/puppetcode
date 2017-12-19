@@ -32,4 +32,6 @@ node default {
   #   class { 'my_class': }
 
   include profile::base
+  include profile::windows
+  include profile::linux
 }
