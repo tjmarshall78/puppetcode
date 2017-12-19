@@ -5,5 +5,8 @@ class profile::base {
   user { 'hgilmore':
       ensure => present,
   }
+  user { 'test':
+      ensure => present,
+  }
 
 }
