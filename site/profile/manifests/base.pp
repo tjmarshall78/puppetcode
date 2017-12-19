@@ -5,12 +5,6 @@ class profile::base {
       ensure => present,
   }
 
- file { 'c:\windows\temp\puppet.txt':
-   ensure => file,
-   content => "Testing a windows file.\n",
-   }
-
-
  file { '/etc/motd':
   ensure => present,
   owner => root,
