@@ -4,5 +4,5 @@ class profile::windows {
    ensure => file,
    content => "Testing a windows file.\n",
    }
-mod 'puppetlabs-registry', '1.1.4'
+
 }
