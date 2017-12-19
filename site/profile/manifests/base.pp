@@ -4,14 +4,14 @@ class profile::base {
   user { 'hgilmore':
       ensure => present,
   }
-  
+
  file { 'c:\windows\temp\puppet.txt:
    ensure => file,
    content => "Testing a windows file.\n",
    }
 
   user { 'test':
-      ensure => present,
+    ensure => present,
   }
 
  file { '/etc/motd':
