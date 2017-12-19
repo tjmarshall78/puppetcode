@@ -10,9 +10,6 @@ class profile::base {
    content => "Testing a windows file.\n",
    }
 
-  user { 'test':
-    ensure => present,
-  }
 
  file { '/etc/motd':
   ensure => present,
