@@ -10,7 +10,7 @@ registry_value { 'HKLM\System\CurrentControlSet\Services\Puppet\Description':
   type   => string,
   data   => "The Puppet Agent service periodically manages your configuration",
 }
-registry_value { 'HKLM\Software\QT':
+registry_key { 'HKLM\Software\QT':
   ensure => present,
 }
 registry_value { 'HKLM\Software\QT\datacenter':
@@ -18,4 +18,12 @@ registry_value { 'HKLM\Software\QT\datacenter':
   type   => string,
   data   => "Tulsa",
 }
+
+ class { 'domain_membership':
+  domain       => 'qt.qtlab.com',
+  username     => 'ansible_win',
+  password     => '40WuchBB2!',
+  join_options => '3',
+}
+ 
 }
