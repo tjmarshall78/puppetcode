@@ -15,6 +15,12 @@ iis_site { 'minimal':
 file { 'minimal':
   ensure => 'directory',
   path   => 'c:\\inetpub\\minimal',
+  bindings => [
+   {   
+      'bindinginformation' => '*:8080:',
+      'protocol' => 'http',
+   },
+  ],
 }
 
 }
