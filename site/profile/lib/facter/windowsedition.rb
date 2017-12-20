@@ -1,4 +1,4 @@
-Facter.add('customfact') do
+Facter.add('QT_Type') do
   confine :osfamily => :windows
   setcode do
     value = nil
