@@ -3,6 +3,7 @@ $iis_features = ['Web-WebServer','Web-Scripting-Tools','Web-Asp-Net45']
 
 iis_feature { $iis_features:
   ensure => 'present',
+  include_management_tools => true,
 } ->
 
 iis_site { 'minimal':
@@ -27,10 +28,6 @@ file { 'minimal':
 iis_site { 'maximum':
   ensure          => 'started',
   physicalpath    => 'c:\\inetpub\\maximum',
-    authenticationinfo => {
-    'basic'     => true,
-    'anonymous' => false,
-  },
   applicationpool => 'DefaultAppPool',
   bindings => [
    {   
