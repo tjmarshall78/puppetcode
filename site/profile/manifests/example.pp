@@ -27,6 +27,10 @@ file { 'minimal':
 iis_site { 'maximum':
   ensure          => 'started',
   physicalpath    => 'c:\\inetpub\\maximum',
+    authenticationinfo => {
+    'basic'     => true,
+    'anonymous' => false,
+  },
   applicationpool => 'DefaultAppPool',
   bindings => [
    {   
