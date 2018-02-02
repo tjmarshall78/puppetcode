@@ -1,5 +1,5 @@
 class profile::example {
-$iis_features = ['Web-WebServer','Web-Scripting-Tools', 'IIS-WindowsAuthentication']
+$iis_features = ['Web-WebServer','Web-Scripting-Tools','Web-Asp-Net45'
 
 iis_feature { $iis_features:
   ensure => 'present',
