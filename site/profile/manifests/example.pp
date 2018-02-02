@@ -11,7 +11,7 @@ iis_site { 'minimal':
   applicationpool => 'DefaultAppPool',
   bindings => [
    {   
-      'bindinginformation' => '*:8080:',
+      'bindinginformation' => '*:8081:',
       'protocol' => 'http',
    },
   ],
