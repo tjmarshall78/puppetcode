@@ -37,7 +37,7 @@ iis_site { 'maximum':
   require         => File['maximum'],
 }
 
-file { 'minimal':
+file { 'maximum':
   ensure => 'directory',
   path   => 'c:\\inetpub\\maximum',
 
