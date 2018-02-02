@@ -24,4 +24,23 @@ file { 'minimal':
 
 }
 
+iis_site { 'maximum':
+  ensure          => 'started',
+  physicalpath    => 'c:\\inetpub\\maximum',
+  applicationpool => 'DefaultAppPool',
+  bindings => [
+   {   
+      'bindinginformation' => '*:8082:',
+      'protocol' => 'http',
+   },
+  ],
+  require         => File['maximum'],
+}
+
+file { 'minimal':
+  ensure => 'directory',
+  path   => 'c:\\inetpub\\maximum',
+
+}
+
 }
