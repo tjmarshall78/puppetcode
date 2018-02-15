@@ -31,7 +31,7 @@ iis_site { 'maximum':
   applicationpool => 'DefaultAppPool',
   bindings => [
    {   
-      'bindinginformation' => '*:8082:',
+      'bindinginformation' => '*:8083:',
       'protocol' => 'http',
    },
   ],
